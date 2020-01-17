@@ -1,0 +1,50 @@
+{
+  materials: [
+    {
+      name: 'lambert2SG',
+      parameters: [
+        {
+          baseColor: 'Tex_Rhinoceros',
+        },
+        {
+          baseColorTint: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/rhino/Mesh_Rhinoceros.obj',
+    name: 'Mesh_Rhinoceros',
+    recenter: 'root',
+    scale: 0.012541,
+  },
+  samplers: [
+    {
+      file: 'sampledata/rhino\\Tex_Rhinoceros.png',
+      name: 'Tex_Rhinoceros',
+      pipeline_name: 'Tex_Rhinoceros.png',
+    },
+  ],
+  version: '0.54:2',
+}
