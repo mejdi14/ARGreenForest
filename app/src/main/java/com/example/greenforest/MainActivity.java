@@ -3,16 +3,20 @@ package com.example.greenforest;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.greenforest.adapter.ObjectAdapter;
+import com.example.greenforest.entities.Object;
 import com.google.ar.core.Anchor;
 import com.google.ar.core.HitResult;
 import com.google.ar.core.Plane;
@@ -21,12 +25,15 @@ import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final double MIN_OPENGL_VERSION = 3.0;
-
-
+    ObjectAdapter objectAdapter;
+    RecyclerView recyclerView;
     ArFragment arFragment;
     ModelRenderable lampPostRenderable;
 
@@ -38,19 +45,11 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         setContentView(R.layout.activity_main);
+        recyclerView=findViewById(R.id.recyclerView);
+        objectAdapter=new ObjectAdapter();
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
+        setUpRecyclerView();
 
-        ModelRenderable.builder()
-                .setSource(this, Uri.parse("Mesh_Frog.sfb"))
-                .build()
-                .thenAccept(renderable -> lampPostRenderable = renderable)
-                .exceptionally(throwable -> {
-                    Toast toast =
-                            Toast.makeText(this, "Unable to load andy renderable", Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.CENTER, 0, 0);
-                    toast.show();
-                    return null;
-                });
 
         arFragment.setOnTapArPlaneListener(
                 (HitResult hitresult, Plane plane, MotionEvent motionevent) -> {
@@ -69,6 +68,40 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
+    }
+
+    private void setUpRecyclerView() {
+        recyclerView.setLayoutManager(new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false));
+        ObjectAdapter objectAdapter = new ObjectAdapter();
+        recyclerView.setAdapter(objectAdapter);
+        List<Object> objects = new ArrayList<>();
+        
+        for (Object singer : Object.objects){
+            objects.add(singer);
+        }
+        objectAdapter.submitList(objects);
+        objectAdapter.notifyDataSetChanged();
+
+        objectAdapter.setOnItemClickListener(new ObjectAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Object note, View view) {
+              showTheObject(note.getRendable());
+            }
+        });
+        }
+
+    private void showTheObject(int rendable) {
+        ModelRenderable.builder()
+                .setSource(this, rendable)
+                .build()
+                .thenAccept(renderable -> lampPostRenderable = renderable)
+                .exceptionally(throwable -> {
+                    Toast toast =
+                            Toast.makeText(this, "Unable to load andy renderable", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                    return null;
+                });
     }
 
     public static boolean checkIsSupportedDeviceOrFinish(final Activity activity) {

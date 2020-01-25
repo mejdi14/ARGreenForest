@@ -1,0 +1,50 @@
+{
+  materials: [
+    {
+      name: 'lambert2SG',
+      parameters: [
+        {
+          baseColor: 'Tex_Emu',
+        },
+        {
+          baseColorTint: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/emu/Mesh_Emu.obj',
+    name: 'Mesh_Emu',
+    recenter: 'root',
+    scale: 0.016763,
+  },
+  samplers: [
+    {
+      file: 'sampledata/emu\\Tex_Emu.png',
+      name: 'Tex_Emu',
+      pipeline_name: 'Tex_Emu.png',
+    },
+  ],
+  version: '0.54:2',
+}

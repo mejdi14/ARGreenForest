@@ -32,27 +32,85 @@ dependencies {
     implementation 'com.google.ar:core:1.7.0'
     implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.13.0'
     implementation 'com.google.ar.sceneform:core:1.13.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+    implementation "androidx.constraintlayout:constraintlayout:2.0.0-beta4"
 }
+
+
 
 
 sceneform.asset('sampledata/Mesh_Frog.obj',
         'default',
         'sampledata/Mesh_Frog.sfa',
-        'src/main/assets/Mesh_Frog')
+        'src/main/res/raw/frog')
 
-sceneform.asset('sampledata/pine_tree/model.obj',
+sceneform.asset('sampledata/tree/MacarthurPalmTree.obj',
         'default',
-        'sampledata/pine_tree/model.sfa',
-        'src/main/assets/model')
+        'sampledata/tree/MacarthurPalmTree.sfa',
+        'src/main/res/raw/tree')
 
-
+sceneform.asset('sampledata/tiger/Mesh_BengalTiger.obj',
+        'default',
+        'sampledata/tiger/Mesh_BengalTiger.sfa',
+        'src/main/res/raw/tiger')
 
 sceneform.asset('sampledata/rhino/Mesh_Rhinoceros.obj',
         'default',
         'sampledata/rhino/Mesh_Rhinoceros.sfa',
-        'src/main/assets/Mesh_Rhinoceros')
+        'src/main/res/raw/rhino')
 
-sceneform.asset('sampledata/palm/palm_tree_02.obj',
+sceneform.asset('sampledata/queen_tree/QueenPalmTree.obj',
         'default',
-        'sampledata/palm/palm_tree_02.sfa',
-        'src/main/assets/palm_tree_02')
+        'sampledata/queen_tree/QueenPalmTree.sfa',
+        'src/main/res/raw/queen')
+
+sceneform.asset('sampledata/pushilin_tree/PUSHILIN_pine_tree.obj',
+        'default',
+        'sampledata/pushilin_tree/PUSHILIN_pine_tree.sfa',
+        'src/main/res/raw/pushilin')
+
+sceneform.asset('sampledata/macarthur_tree/MacarthurPalmTree.obj',
+        'default',
+        'sampledata/macarthur_tree/MacarthurPalmTree.sfa',
+        'src/main/res/raw/macarthur')
+
+sceneform.asset('sampledata/lady_tree/LadyPalmTree(1).obj',
+        'default',
+        'sampledata/lady_tree/LadyPalmTree(1).sfa',
+        'src/main/res/raw/lady')
+
+sceneform.asset('sampledata/key_tree/KeyThatchPalmTree.obj',
+        'default',
+        'sampledata/key_tree/KeyThatchPalmTree.sfa',
+        'src/main/res/raw/key')
+
+sceneform.asset('sampledata/hyena/SpottedHyena.obj',
+        'default',
+        'sampledata/hyena/SpottedHyena.sfa',
+        'src/main/res/raw/hyena')
+
+sceneform.asset('sampledata/great_egret/GreatEgret.obj',
+        'default',
+        'sampledata/great_egret/GreatEgret.sfa',
+        'src/main/res/raw/egret')
+
+sceneform.asset('sampledata/emu/Mesh_Emu.obj',
+        'default',
+        'sampledata/emu/Mesh_Emu.sfa',
+        'src/main/res/raw/emu')
+
+sceneform.asset('sampledata/cherry_tree/CherryTree.obj',
+        'default',
+        'sampledata/cherry_tree/CherryTree.sfa',
+        'src/main/res/raw/cherry')
+
+sceneform.asset('sampledata/bubinga/BubingaTree.obj',
+        'default',
+        'sampledata/bubinga/BubingaTree.sfa',
+        'src/main/res/raw/bubinga')
+
+sceneform.asset('sampledata/apple_tree/AppleTree.obj',
+        'default',
+        'sampledata/apple_tree/AppleTree.sfa',
+        'src/main/res/raw/apple')

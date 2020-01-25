@@ -1,0 +1,50 @@
+{
+  materials: [
+    {
+      name: 'CherryTree_mat',
+      parameters: [
+        {
+          baseColor: 'CherryTree_BaseColor',
+        },
+        {
+          baseColorTint: [
+            0.5,
+            0.5,
+            0.5,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/cherry_tree/CherryTree.obj',
+    name: 'CherryTree',
+    recenter: 'root',
+    scale: 0.085408999999999999,
+  },
+  samplers: [
+    {
+      file: 'sampledata/cherry_tree\\CherryTree_BaseColor.png',
+      name: 'CherryTree_BaseColor',
+      pipeline_name: 'CherryTree_BaseColor.png',
+    },
+  ],
+  version: '0.54:2',
+}

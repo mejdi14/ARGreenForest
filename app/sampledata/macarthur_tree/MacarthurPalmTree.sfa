@@ -1,0 +1,50 @@
+{
+  materials: [
+    {
+      name: 'MacarthurPalmTree_mat',
+      parameters: [
+        {
+          baseColor: 'MacarthurPalmTree_BaseColor',
+        },
+        {
+          baseColorTint: [
+            0.5,
+            0.5,
+            0.5,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/macarthur_tree/MacarthurPalmTree.obj',
+    name: 'MacarthurPalmTree',
+    recenter: 'root',
+    scale: 0.124971,
+  },
+  samplers: [
+    {
+      file: 'sampledata/macarthur_tree\\MacarthurPalmTree_BaseColor.png',
+      name: 'MacarthurPalmTree_BaseColor',
+      pipeline_name: 'MacarthurPalmTree_BaseColor.png',
+    },
+  ],
+  version: '0.54:2',
+}

@@ -1,0 +1,50 @@
+{
+  materials: [
+    {
+      name: 'LadyPalmTree_mat',
+      parameters: [
+        {
+          baseColor: 'LadyPalmTree_BaseColor',
+        },
+        {
+          baseColorTint: [
+            0.5,
+            0.5,
+            0.5,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/lady_tree/LadyPalmTree(1).obj',
+    name: 'LadyPalmTree(1)',
+    recenter: 'root',
+    scale: 0.080092999999999998,
+  },
+  samplers: [
+    {
+      file: 'sampledata/lady_tree\\LadyPalmTree_BaseColor.png',
+      name: 'LadyPalmTree_BaseColor',
+      pipeline_name: 'LadyPalmTree_BaseColor.png',
+    },
+  ],
+  version: '0.54:2',
+}
