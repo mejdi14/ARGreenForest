@@ -23,7 +23,7 @@
 
 ## ✨ Demo
 <p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zb6w-m6mEz8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[<img src="https://img.youtube.com/vi/<VIDEO ID>/maxresdefault.jpg" width="50%">](https://youtu.be/zb6w-m6mEz8)
 	</p>
 	
 	
