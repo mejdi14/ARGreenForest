@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-<img src="https://github.com/mejdi14/ARGreenForest/blob/master/files/preview.png" height="300" width="300" >
+<img src="https://github.com/mejdi14/ARGreenForest/blob/master/files/logo.png" height="300" width="300" >
 	</p>
 	
 ## :art:Credits
@@ -23,7 +23,7 @@
 
 ## ✨ Demo
 <p align="center">
-<img src="https://github.com/mejdi14/ARGreenForest/blob/master/files/ar.mp4" height="400" width="550" >
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zb6w-m6mEz8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</p>
 	
 	
