@@ -18,8 +18,6 @@
 <img src="https://github.com/mejdi14/ARGreenForest/blob/master/files/logo.png" height="300" width="300" >
 	</p>
 	
-## :art:Credits
-- Many thanks to : [@Marta Skowron](https://dribbble.com/skowrony) for the amazing design
 
 ## ✨ Demo
 <p align="center">
