@@ -23,7 +23,8 @@
 
 ## ✨ Demo
 <p align="center">
-[<img src="https://github.com/mejdi14/ARGreenForest/blob/master/files/youtube.png" width="50%">](https://youtu.be/zb6w-m6mEz8)
+
+	[![IMAGE ALT TEXT HERE](https://github.com/mejdi14/ARGreenForest/blob/master/files/youtube.png)](https://youtu.be/zb6w-m6mEz8)
 	</p>
 	
 	
