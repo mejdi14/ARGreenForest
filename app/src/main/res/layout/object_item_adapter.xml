@@ -9,23 +9,24 @@
     android:background="@drawable/glow_border"
     android:padding="5dp">
 
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/imageView"
+    <ImageView
+        android:id="@+id/photo"
         android:layout_width="75dp"
         android:layout_height="55dp"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/apple_tree" />
+        android:src="@drawable/cherry_tree" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
         android:text="Tree"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/photo"
+        app:layout_constraintStart_toStartOf="@+id/photo"
+        app:layout_constraintTop_toBottomOf="@+id/photo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

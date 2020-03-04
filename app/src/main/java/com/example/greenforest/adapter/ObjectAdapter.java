@@ -3,6 +3,7 @@ package com.example.greenforest.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,17 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.greenforest.R;
 import com.example.greenforest.entities.Object;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ObjectAdapter extends ListAdapter<Object, ObjectAdapter.NoteHolder> {
     private ObjectAdapter.OnItemClickListener listener;
-    float ImageRadius = 40.0f;
-    private List<Object> objectList=new ArrayList<>();
     String TAG = "HistoryAdapter";
     String PAYLOAD_SELECTED_INDICATOR = "PAYLOAD_SELECTED_INDICATOR";
     private int selectedPos = RecyclerView.NO_POSITION;
-    int previousPosition=-1;
+
     public ObjectAdapter() {
         super(DIFF_CALLBACK);
     }
@@ -40,6 +38,7 @@ public class ObjectAdapter extends ListAdapter<Object, ObjectAdapter.NoteHolder>
             return true;
         }
     };
+
     @NonNull
 
     public ObjectAdapter.NoteHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -53,21 +52,21 @@ public class ObjectAdapter extends ListAdapter<Object, ObjectAdapter.NoteHolder>
         final Object currentSong = getItem(position);
 
 
-
-
     }
 
     @Override
     public void onBindViewHolder(@NonNull NoteHolder holder, int position, @NonNull List<java.lang.Object> payloads) {
-            super.onBindViewHolder(holder, position, payloads);
-            NoteHolder noteHolder=holder;
-            View view=holder.itemView;
-            view.setSelected(selectedPos==position);
+        super.onBindViewHolder(holder, position, payloads);
+        Object object = getObjectAt(position);
+        holder.photo.setImageResource(object.getImage());
+        holder.name.setText(object.getName());
+        View view = holder.itemView;
+        view.setSelected(selectedPos == position);
 
         if (!payloads.isEmpty()) {
             java.lang.Object pay = payloads.get(0);
             if (pay instanceof String && pay.equals(this.PAYLOAD_SELECTED_INDICATOR)) {
-              //  this.updateSelectedIndicator(objectList);
+                this.updateSelectedIndicator(holder);
             }
         } else {
             super.onBindViewHolder(holder, position, payloads);
@@ -75,44 +74,56 @@ public class ObjectAdapter extends ListAdapter<Object, ObjectAdapter.NoteHolder>
 
     }
 
-  /*  private final void updateSelectedIndicator(ObjectAdapter.NoteHolder noteHolder) {
-        ConstraintLayout var10000 = noteHolder.getRootView();
-        if (var10000 != null) {
-            View var10001 = historyPreviewHolder.itemView;
-            Intrinsics.checkExpressionValueIsNotNull(var10001, "historyPreviewHolder.itemView");
-            var10000.setSelected(var10001.isSelected());
-        }
 
-    }*/
-
-    public Object getNoteAt(int position) {
+    public Object getObjectAt(int position) {
         return getItem(position);
     }
 
 
-
     class NoteHolder extends RecyclerView.ViewHolder {
-        private TextView title;
-        private TextView discription;
-        private TextView number;
-        private TextView time;
-        private ConstraintLayout parentFrame;
+        private TextView name;
+        private ImageView photo;
+        private ConstraintLayout root;
+
 
         public NoteHolder(final View itemView) {
             super(itemView);
-            //title = itemView.findViewById(R.id.title);
+            name = itemView.findViewById(R.id.name);
+            photo = itemView.findViewById(R.id.photo);
+            root = itemView.findViewById(R.id.root);
 
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    updateViewSelectedState(getAdapterPosition());
                     int position = getAdapterPosition();
                     if (listener != null && position != RecyclerView.NO_POSITION) {
-                        listener.onItemClick(getItem(position),itemView);
+                        listener.onItemClick(getItem(position), itemView);
                     }
                 }
             });
         }
+
+        public ConstraintLayout getRoot() {
+            return root;
+        }
+    }
+
+    public final void updateViewSelectedState(int position) {
+        int prevSelected = this.selectedPos;
+        this.selectedPos = position;
+        this.notifyItemChanged(prevSelected, this.PAYLOAD_SELECTED_INDICATOR);
+        this.notifyItemChanged(this.selectedPos, this.PAYLOAD_SELECTED_INDICATOR);
+    }
+
+    private final void updateSelectedIndicator(ObjectAdapter.NoteHolder historyPreviewHolder) {
+        ConstraintLayout constraintLayout = historyPreviewHolder.getRoot();
+        if (constraintLayout != null) {
+            View var10001 = historyPreviewHolder.itemView;
+            constraintLayout.setSelected(var10001.isSelected());
+        }
+
     }
 
     public interface OnItemClickListener {

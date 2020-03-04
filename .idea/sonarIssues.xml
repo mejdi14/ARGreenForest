@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="$USER_HOME$/Documents/ASM.GIT/ProfileDesign/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/ASM.GIT/ProfileDesign/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/ASM.GIT/razi_printer/TT-FastQueue/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/ASM.GIT/razi_printer/TT-FastQueue/app/src/main/java/com/asmtunis/printer/network/datamanager/ServiceFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/greenforest/adapter/ObjectAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/greenforest/entities/Object.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/object_item_adapter.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="E:/RxRiddles/src/main/kotlin/com/vanniktech/rxriddles/Riddle5.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="E:/cover mobile app/BookSwipe/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="E:/cover mobile app/BookSwipe/app/src/main/java/asm/asmtunis/com/bookswipe/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="E:/cover mobile app/BookSwipe/app/src/main/java/asm/asmtunis/com/bookswipe/fragment/FirstFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="E:/cover mobile app/BookSwipe/app/src/main/java/asm/asmtunis/com/bookswipe/fragment/SecondFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="E:/cover mobile app/BookSwipe/app/src/main/java/asm/asmtunis/com/bookswipe/fragment/ThirdFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="E:/cover mobile app/BookSwipe/app/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="E:/cover mobile app/BookSwipe/app/src/main/res/layout/fragment_first.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="E:/cover mobile app/BookSwipe/app/src/main/res/layout/fragment_second.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="E:/cover mobile app/BookSwipe/app/src/main/res/layout/fragment_third.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="E:/cover mobile app/BookSwipe/app/src/main/res/menu/bottom_navigation_menu.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="E:/cover mobile app/BookSwipe/app/src/main/res/values/colors.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
