@@ -23,7 +23,7 @@
 
 ## ✨ Demo
 <p align="center">
-[<img src="https://img.youtube.com/vi/<VIDEO ID>/maxresdefault.jpg" width="50%">](https://youtu.be/zb6w-m6mEz8)
+[<img src="https://github.com/mejdi14/ARGreenForest/blob/master/files/youtube.png" width="50%">](https://youtu.be/zb6w-m6mEz8)
 	</p>
 	
 	
